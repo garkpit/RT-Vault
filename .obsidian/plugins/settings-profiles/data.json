@@ -1,0 +1,16 @@
+{
+  "activeProfile": {},
+  "profileUpdate": true,
+  "profileUpdateDelay": 800,
+  "uiUpdate": true,
+  "uiUpdateInterval": 1000,
+  "devices": {
+    "3222129663758c4451cbbec21f5f9855be1514b5592c2013dab4bf12da607f57": "/Users/Jay/Library/Application Support/ObsidianPlugins/Profiles"
+  },
+  "statusbarInteraction": {
+    "click": "auto",
+    "ctrl_click": "none",
+    "shift_click": "none",
+    "alt_click": "none"
+  }
+}
