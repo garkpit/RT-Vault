@@ -13,3 +13,6 @@ tags:
 
 Help getting vault sharing working via GitHub
 
+**I RIPPED THIS USING THE WEB CLIPPER - SO EASY**
+
+
