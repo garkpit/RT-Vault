@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "a1f1a341cf13c5d2",
+        "id": "9de235f8fbf0eb64",
         "type": "tabs",
         "children": [
           {
-            "id": "be66081a9940f74a",
+            "id": "016910d1ba63162f",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -193,11 +193,11 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "be66081a9940f74a",
+  "active": "016910d1ba63162f",
   "lastOpenFiles": [
+    "README.md",
     "temp/Icons tests.md",
     "temp/Jay says....md",
-    "README.md",
     "Help/Getting Started - Git Documentation - Obsidian Publish.md",
     "Help/Untitled.md",
     "Help/HOW TO Duplicate this vault.md",
