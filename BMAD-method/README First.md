@@ -5,3 +5,6 @@ Then you can ... e.g. point Claude Desktop at it.
 
 **It gets updated almost daily. Remember to Fetch regularly and Pull updates.**
 
+# Why this?
+It's good.
+Yes, there are others. Right now this is the best.
