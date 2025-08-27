@@ -1,8 +1,5 @@
 # Hello!
+GitHub repositories like having a README.md file in the root
+So,
+Don't delete this file :FarFaceLaughBeam: 
 
-This repo is a Template for new Obsidian Vaults that are shared using Git / GitHub
-
-Icon test: Font Awesome Regular (Far): :FarFloppyDisk: <- Yes, that works :FarFaceGrinStars: 
-
-## Icon in a header, sir? :FarGem:
-Yep 
