@@ -12,5 +12,8 @@ Don't delete this file :FarFaceLaughBeam:
 Where Jay shares anything remotely interesting with Mike and Ross
 and vice versa 
 
+# IMPORTANT THINGS
+## DO NOT USE THIS VAULT ON MOBILE (so says the git plugin docs)
+
 
 
