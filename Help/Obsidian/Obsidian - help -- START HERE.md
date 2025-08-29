@@ -13,8 +13,16 @@ THE BENEFITS ARE
 
 [Take your Filing and Tagging to the next level by using Properties in Obsidian notes](https://help.obsidian.md/properties)
 
+## Tips
 JUST TRY COMMAND + P 
 (ctrl P on Windows)
+
+Get good with triple backtick
+```
+Awfully good
+```
+
+Learn # space for H1, ## space for H2, etc
 
 
 

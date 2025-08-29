@@ -1,759 +1,440 @@
-# BMAD-method - Visual Guide
-
-A comprehensive collection of Mermaid diagrams illustrating every aspect of the BMAD-method framework, from simple workflows to complex architectures.
-
-I made this as I thought it would be helpful.
+Helpful Learning BMAD Diagrams
 
 ---
 
-## Part 1: Story Development Workflows
-
-### 1.1 Story Status Flow - Simple Development
-**Purpose**: Basic story progression for straightforward features  
-**When to Use**: Low-risk stories, simple UI changes, basic CRUD operations  
-**Best For**: Junior developers, quick fixes, well-understood requirements
-
-```mermaid
-graph TD
-    A["📝 Draft Story"] --> B["✅ Story Approved"]
-    B --> C["💻 In Development"]
-    C --> D["🔍 Ready for Review"]
-    D --> E["✅ Complete"]
-    
-    style A fill:#ffeb3b,color:#000
-    style B fill:#4caf50,color:#fff
-    style C fill:#2196f3,color:#fff
-    style D fill:#ff9800,color:#fff
-    style E fill:#4caf50,color:#fff
-```
-
-### 1.2 Story Status Flow - Complex Development
-**Purpose**: Complete story lifecycle with QA gates and risk assessment  
-**When to Use**: High-risk features, performance-critical code, security features  
-**Best For**: Senior teams, regulated industries, mission-critical features
-
-```mermaid
-graph TD
-    A["📝 Draft Story"] --> B{"🎯 Risk Assessment"}
-    B -->|High Risk| C["⚠️ Test Design"]
-    B -->|Low Risk| D["✅ Story Approved"]
-    C --> D
-    D --> E["💻 In Development"]
-    E --> F["🧪 Mid-Dev Testing"]
-    F --> G{"Test Coverage?"}
-    G -->|Gaps Found| E
-    G -->|Complete| H["🔍 Ready for Review"]
-    H --> I["🔬 QA Review"]
-    I --> J{"Quality Gate"}
-    J -->|PASS| K["✅ Complete"]
-    J -->|CONCERNS| L["📋 Address Issues"]
-    J -->|FAIL| E
-    L --> M["🔄 Re-Review"]
-    M --> K
-    
-    style A fill:#ffeb3b,color:#000
-    style B fill:#e91e63,color:#fff
-    style C fill:#ff5722,color:#fff
-    style D fill:#4caf50,color:#fff
-    style E fill:#2196f3,color:#fff
-    style F fill:#9c27b0,color:#fff
-    style G fill:#ff9800,color:#fff
-    style H fill:#ff9800,color:#fff
-    style I fill:#9c27b0,color:#fff
-    style J fill:#e91e63,color:#fff
-    style K fill:#4caf50,color:#fff
-    style L fill:#ffeb3b,color:#000
-    style M fill:#ff9800,color:#fff
-```
+## PROMPT
+pls do me a markdown file i can download with mermaid diagrams for: 1. Story Status flow (simplified) 2. Story Status flow (advanced) 3. SDLC (simplified) 4. SDLC (advanced)
+### Settings
+Sonnet 4.0
 
 ---
 
-## Part 2: SDLC Workflows
+## RESPONSE
+#### Response
+Perfect! I've created a comprehensive markdown file with all four Mermaid diagrams you requested:
 
-### 2.1 BMAD SDLC - Simplified
-**Purpose**: High-level overview of the complete development lifecycle  
-**When to Use**: Project kickoff, stakeholder presentations, training new team members  
-**Best For**: Management overview, quick reference, onboarding
+## 📊 **What's Included:**
 
-```mermaid
-graph TD
-    A["💡 Idea"] --> B["📋 Planning"]
-    B --> C["🏗️ Architecture"]
-    C --> D["✂️ Story Sharding"]
-    D --> E["💻 Development"]
-    E --> F["🧪 Testing"]
-    F --> G["🚀 Deployment"]
-    
-    style A fill:#e3f2fd,color:#000
-    style B fill:#fff3e0,color:#000
-    style C fill:#f3e5f5,color:#000
-    style D fill:#fce4ec,color:#000
-    style E fill:#2196f3,color:#fff
-    style F fill:#9c27b0,color:#fff
-    style G fill:#4caf50,color:#fff
-```
+### **1. Story Status Flow (Simplified)**
 
-### 2.2 BMAD SDLC - Advanced
-**Purpose**: Detailed view showing all agents and decision points  
-**When to Use**: Process documentation, team training, workflow optimization  
-**Best For**: Technical leads, process improvement, quality assurance
+- Basic story progression from Draft → Done
+- Clear decision points and status changes
+- Color-coded for easy visual understanding
 
-```mermaid
-graph TD
-    A["💡 Project Idea"] --> B{"Need Research?"}
-    B -->|Yes| C["🔍 Analyst: Market Research"]
-    B -->|No| D["📋 PM: Create PRD"]
-    C --> D
-    D --> E{"UX Needed?"}
-    E -->|Yes| F["🎨 UX: Design Specs"]
-    E -->|No| G["🏗️ Architect: Technical Design"]
-    F --> G
-    G --> H["👮 PO: Validate Alignment"]
-    H --> I{"Documents Aligned?"}
-    I -->|No| J["🔄 Revise Documents"]
-    I -->|Yes| K["✂️ PO: Shard Documents"]
-    J --> H
-    K --> L["📝 SM: Draft Story"]
-    L --> M{"Risk Level?"}
-    M -->|High| N["⚠️ QA: Risk & Test Design"]
-    M -->|Low| O["💻 Dev: Implement"]
-    N --> O
-    O --> P["🧪 QA: Review & Gate"]
-    P --> Q{"Quality Gate"}
-    Q -->|FAIL| O
-    Q -->|PASS| R["✅ Story Complete"]
-    R --> S{"More Stories?"}
-    S -->|Yes| L
-    S -->|No| T["🚀 Epic Complete"]
-    
-    style A fill:#e3f2fd,color:#000
-    style B fill:#ffeb3b,color:#000
-    style C fill:#e8f5e9,color:#000
-    style D fill:#fff3e0,color:#000
-    style E fill:#ffeb3b,color:#000
-    style F fill:#e1f5fe,color:#000
-    style G fill:#f3e5f5,color:#000
-    style H fill:#ff9800,color:#fff
-    style I fill:#ffeb3b,color:#000
-    style J fill:#ff5722,color:#fff
-    style K fill:#ff9800,color:#fff
-    style L fill:#e8f5e9,color:#000
-    style M fill:#e91e63,color:#fff
-    style N fill:#ff5722,color:#fff
-    style O fill:#2196f3,color:#fff
-    style P fill:#9c27b0,color:#fff
-    style Q fill:#e91e63,color:#fff
-    style R fill:#4caf50,color:#fff
-    style S fill:#ffeb3b,color:#000
-    style T fill:#4caf50,color:#fff
-```
+### **2. Story Status Flow (Advanced)**
+
+- Complete story lifecycle with QA integration
+- Risk assessment and test design phases
+- Mid-development checkpoints and quality gates
+- Technical debt management integration
+
+### **3. SDLC (Simplified)**
+
+- High-level software development lifecycle
+- Major phases from idea to maintenance
+- Clean, easy-to-understand flow
+
+### **4. SDLC (Advanced) - Complete BMAD Method**
+
+- Full planning phase workflow (Web UI)
+- Complete development cycle (IDE)
+- QA command integration (*risk, *design, *trace, *nfr, *review, *gate)
+- Technical debt management process
+- Post-epic activities
+
+## 🎯 **Additional Features:**
+
+- **QA Agent Command Reference** with flow integration
+- **Greenfield vs Brownfield** process variations
+- **Key Success Metrics** and performance indicators
+- **Color-coded diagrams** for visual clarity
+
+## 📥 **Ready to Download**
+
+The artifact contains everything in a single markdown file that you can:
+
+- Download and save locally
+- View in any markdown editor with Mermaid support
+- Share with team members
+- Use for documentation and training
+
+The diagrams capture your actual BMAD implementation process, including the lessons learned and improvements you've discovered during your videoFabricWithZoom project! 🚀✨
 
 ---
 
-## Part 3: Agent Workflows
+#### Document (Artifact)
+# BMAD Method Process Flow Diagrams
 
-### 3.1 Agent Collaboration Flow
-**Purpose**: Shows how agents pass work between each other  
-**When to Use**: Understanding agent responsibilities, training on agent roles  
-**Best For**: New team members, process documentation, role definition
+This document contains comprehensive process flow diagrams for the BMAD Method, optimized for dark mode viewing and broken into digestible sections for better readability.
 
-```mermaid
-graph TD
-    A["🔍 Analyst"] --> B["📋 PM"]
-    B --> C["🎨 UX Expert"]
-    C --> D["🏗️ Architect"]
-    B --> D
-    D --> E["👮 PO"]
-    E --> F["📝 SM"]
-    F --> G["💻 Dev"]
-    G --> H["🧪 QA"]
-    H --> F
-    
-    style A fill:#e8f5e9,color:#000
-    style B fill:#fff3e0,color:#000
-    style C fill:#e1f5fe,color:#000
-    style D fill:#f3e5f5,color:#000
-    style E fill:#ff9800,color:#fff
-    style F fill:#e8f5e9,color:#000
-    style G fill:#2196f3,color:#fff
-    style H fill:#9c27b0,color:#fff
-```
+## 1. Story Status Flow (Simplified)
 
-### 3.2 Agent Decision Tree
-**Purpose**: Which agent to use for specific tasks  
-**When to Use**: Task assignment, choosing the right agent  
-**Best For**: Quick reference, delegation decisions
+**What it shows:** Basic story lifecycle from creation to completion  
+**When to use:** Quick reference for story status progression and decision points  
+**Best for:** New team members learning the process
 
 ```mermaid
 graph TD
-    A["🤔 What Do You Need?"] --> B{"Type of Work"}
-    B -->|Research| C["🔍 Analyst"]
-    B -->|Requirements| D["📋 PM"]
-    B -->|Design| E["🎨 UX Expert"]
-    B -->|Technical| F{"Technical Type"}
-    F -->|Architecture| G["🏗️ Architect"]
-    F -->|Implementation| H["💻 Dev"]
-    F -->|Testing| I["🧪 QA"]
-    B -->|Process| J{"Process Type"}
-    J -->|Validation| K["👮 PO"]
-    J -->|Story Creation| L["📝 SM"]
+    A["📝 Draft"] --> B["👀 User Review"]
+    B --> C{"✅ Approved?"}
+    C -->|Yes| D["⚡ In Development"]
+    C -->|No| A
+    D --> E["🏁 Implementation Complete"]
+    E --> F["🧪 QA Review"]
+    F --> G{"🚪 QA Gate"}
+    G -->|PASS| H["✅ Done"]
+    G -->|CONCERNS/FAIL| I["🔧 Address Issues"]
+    I --> F
     
-    style A fill:#ffeb3b,color:#000
-    style B fill:#e91e63,color:#fff
-    style C fill:#e8f5e9,color:#000
-    style D fill:#fff3e0,color:#000
-    style E fill:#e1f5fe,color:#000
-    style F fill:#9c27b0,color:#fff
-    style G fill:#f3e5f5,color:#000
-    style H fill:#2196f3,color:#fff
-    style I fill:#9c27b0,color:#fff
-    style J fill:#ff9800,color:#fff
-    style K fill:#ff9800,color:#fff
-    style L fill:#e8f5e9,color:#000
+    style A fill:#FFD700,color:#000000,stroke:#000000,stroke-width:3px
+    style B fill:#87CEEB,color:#000000,stroke:#000000,stroke-width:3px
+    style C fill:#DDA0DD,color:#000000,stroke:#000000,stroke-width:3px
+    style D fill:#9370DB,color:#FFFFFF,stroke:#FFFFFF,stroke-width:3px
+    style E fill:#32CD32,color:#000000,stroke:#000000,stroke-width:3px
+    style F fill:#00BFFF,color:#000000,stroke:#000000,stroke-width:3px
+    style G fill:#FF69B4,color:#000000,stroke:#000000,stroke-width:3px
+    style H fill:#00FF00,color:#000000,stroke:#000000,stroke-width:3px
+    style I fill:#FF4500,color:#FFFFFF,stroke:#FFFFFF,stroke-width:3px
 ```
 
----
+## 2. Story Creation & Planning Flow
 
-## Part 4: Planning Phase Workflows
-
-### 4.1 Planning Phase Overview
-**Purpose**: Complete planning workflow from idea to ready-for-development  
-**When to Use**: Project initiation, pre-development phase  
-**Best For**: Project managers, technical leads, stakeholders
+**What it shows:** How stories are created with optional risk assessment  
+**When to use:** Understanding when to involve QA early in story planning  
+**Best for:** Planning complex or high-risk features
 
 ```mermaid
 graph TD
-    A["💡 Project Idea"] --> B["📄 Create Brief"]
-    B --> C["📋 Create PRD"]
-    C --> D{"Need UX?"}
-    D -->|Yes| E["🎨 UX Specs"]
-    D -->|No| F["🏗️ Architecture"]
-    E --> F
-    F --> G["✅ Validate"]
-    G --> H{"Aligned?"}
-    H -->|No| I["🔄 Revise"]
-    H -->|Yes| J["✂️ Shard"]
-    I --> G
-    J --> K["🚀 Ready for Dev"]
+    A1["👨‍💼 SM: Draft Story"] --> A2["📄 Story File Created"]
+    A2 --> A3{"⚠️ High Risk Story?"}
+    A3 -->|Yes| A4["🧪 QA: *risk Assessment"]
+    A3 -->|No| B1["👀 User Review"]
+    A4 --> A5["📋 QA: *design Test Strategy"]
+    A5 --> B1
+    B1 --> B2{"✅ User Decision"}
+    B2 -->|Needs Changes| A1
+    B2 -->|Approved| C1["🚀 Status: Ready"]
     
-    style A fill:#e3f2fd,color:#000
-    style B fill:#e8f5e9,color:#000
-    style C fill:#fff3e0,color:#000
-    style D fill:#ffeb3b,color:#000
-    style E fill:#e1f5fe,color:#000
-    style F fill:#f3e5f5,color:#000
-    style G fill:#ff9800,color:#fff
-    style H fill:#ffeb3b,color:#000
-    style I fill:#ff5722,color:#fff
-    style J fill:#ff9800,color:#fff
-    style K fill:#4caf50,color:#fff
+    style A1 fill:#00BFFF,color:#000000,stroke:#000000,stroke-width:3px
+    style A2 fill:#98FB98,color:#000000,stroke:#000000,stroke-width:3px
+    style A3 fill:#FFA500,color:#000000,stroke:#000000,stroke-width:3px
+    style A4 fill:#FFD700,color:#000000,stroke:#000000,stroke-width:3px
+    style A5 fill:#FFFF00,color:#000000,stroke:#000000,stroke-width:3px
+    style B1 fill:#87CEEB,color:#000000,stroke:#000000,stroke-width:3px
+    style B2 fill:#DDA0DD,color:#000000,stroke:#000000,stroke-width:3px
+    style C1 fill:#00FF00,color:#000000,stroke:#000000,stroke-width:3px
 ```
 
-### 4.2 Document Creation Flow
-**Purpose**: How core planning documents are created and validated  
-**When to Use**: Document generation, quality assurance  
-**Best For**: PMs, architects, documentation teams
+## 3. Development Execution Flow
+
+**What it shows:** Core development cycle with optional mid-development QA  
+**When to use:** Understanding the development phase workflow  
+**Best for:** Developers and project managers tracking progress
 
 ```mermaid
 graph TD
-    A["📄 Brief"] --> B["📋 PRD"]
-    B --> C["🏗️ Architecture"]
-    C --> D["👮 PO Checklist"]
-    D --> E{"Quality Check"}
-    E -->|Pass| F["✅ Approved Docs"]
-    E -->|Fail| G["🔄 Revisions"]
-    G --> B
+    C1["🚀 Status: Ready"] --> C2["👩‍💻 Dev: Start Implementation"]
+    C2 --> C3["⚙️ Dev: Execute Tasks"]
+    C3 --> C4{"🔍 Mid-Dev Check?"}
+    C4 -->|Yes| C5["🧪 QA: *trace or *nfr"]
+    C4 -->|No| C6["🔧 Dev: Address Gaps"]
+    C5 --> C6
+    C6 --> C7["📋 Dev: Mark Ready for Review"]
     
-    style A fill:#e8f5e9,color:#000
-    style B fill:#fff3e0,color:#000
-    style C fill:#f3e5f5,color:#000
-    style D fill:#ff9800,color:#fff
-    style E fill:#e91e63,color:#fff
-    style F fill:#4caf50,color:#fff
-    style G fill:#ff5722,color:#fff
+    style C1 fill:#00FF00,color:#000000,stroke:#000000,stroke-width:3px
+    style C2 fill:#32CD32,color:#000000,stroke:#000000,stroke-width:3px
+    style C3 fill:#98FB98,color:#000000,stroke:#000000,stroke-width:3px
+    style C4 fill:#FF69B4,color:#000000,stroke:#000000,stroke-width:3px
+    style C5 fill:#00BFFF,color:#000000,stroke:#000000,stroke-width:3px
+    style C6 fill:#FFD700,color:#000000,stroke:#000000,stroke-width:3px
+    style C7 fill:#9370DB,color:#FFFFFF,stroke:#FFFFFF,stroke-width:3px
 ```
 
----
+## 4. Quality Assurance Flow
 
-## Part 5: Development Phase Workflows
-
-### 5.1 Core Development Cycle
-**Purpose**: The iterative story development process  
-**When to Use**: Active development phase, sprint execution  
-**Best For**: Development teams, scrum masters
+**What it shows:** QA review process with gate decisions  
+**When to use:** Understanding quality checkpoints and outcomes  
+**Best for:** QA team members and quality-focused workflows
 
 ```mermaid
 graph TD
-    A["📚 Story Backlog"] --> B["📝 SM: Draft Story"]
-    B --> C["👤 User Review"]
-    C --> D{"Approved?"}
-    D -->|No| B
-    D -->|Yes| E["💻 Dev: Implement"]
-    E --> F["✅ Mark Complete"]
-    F --> G["🧪 QA Review"]
-    G --> H{"Quality Gate"}
-    H -->|PASS| I["✅ Done"]
-    H -->|FAIL| E
-    I --> J{"More Stories?"}
-    J -->|Yes| B
-    J -->|No| K["🎉 Epic Complete"]
+    C7["📋 Ready for Review"] --> D1{"🤔 User QA Choice"}
+    D1 -->|Full QA Review| D2["🧪 QA: *review Story"]
+    D1 -->|Skip QA| D5["👀 User Verification"]
+    D2 --> D3["📊 QA: Test Architecture Analysis"]
+    D3 --> D4{"🚪 QA Gate Decision"}
+    D4 -->|PASS| D6["💾 COMMIT Changes"]
+    D4 -->|CONCERNS| D7["📝 Document Issues"]
+    D4 -->|FAIL| D8["🔄 Back to Development"]
+    D5 --> D6
+    D7 --> D6
+    D6 --> D9["✅ Status: Done"]
     
-    style A fill:#e3f2fd,color:#000
-    style B fill:#e8f5e9,color:#000
-    style C fill:#ffeb3b,color:#000
-    style D fill:#e91e63,color:#fff
-    style E fill:#2196f3,color:#fff
-    style F fill:#4caf50,color:#fff
-    style G fill:#9c27b0,color:#fff
-    style H fill:#e91e63,color:#fff
-    style I fill:#4caf50,color:#fff
-    style J fill:#ffeb3b,color:#000
-    style K fill:#4caf50,color:#fff
+    style C7 fill:#9370DB,color:#FFFFFF,stroke:#FFFFFF,stroke-width:3px
+    style D1 fill:#DDA0DD,color:#000000,stroke:#000000,stroke-width:3px
+    style D2 fill:#FF8C00,color:#000000,stroke:#000000,stroke-width:3px
+    style D3 fill:#FFA500,color:#000000,stroke:#000000,stroke-width:3px
+    style D4 fill:#FF69B4,color:#000000,stroke:#000000,stroke-width:3px
+    style D5 fill:#87CEEB,color:#000000,stroke:#000000,stroke-width:3px
+    style D6 fill:#32CD32,color:#000000,stroke:#000000,stroke-width:3px
+    style D7 fill:#FFFF00,color:#000000,stroke:#000000,stroke-width:3px
+    style D8 fill:#FF4500,color:#FFFFFF,stroke:#FFFFFF,stroke-width:3px
+    style D9 fill:#00FF00,color:#000000,stroke:#000000,stroke-width:3px
 ```
 
-### 5.2 Developer Task Execution
-**Purpose**: How developers work through story tasks  
-**When to Use**: Task implementation, code development  
-**Best For**: Developers, technical leads
+## 5. BMAD Planning Phase (Web UI)
+
+**What it shows:** Complete planning workflow from idea to architecture  
+**When to use:** Starting a new project or major feature  
+**Best for:** Project kickoff and strategic planning
 
 ```mermaid
 graph TD
-    A["📋 Read Story"] --> B["📝 Read Task"]
-    B --> C["💻 Implement"]
-    C --> D["🧪 Write Tests"]
-    D --> E["✅ Run Validations"]
-    E --> F{"All Pass?"}
-    F -->|No| G["🔧 Fix Issues"]
-    F -->|Yes| H["☑️ Mark Task Done"]
-    G --> C
-    H --> I{"More Tasks?"}
-    I -->|Yes| B
-    I -->|No| J["📄 Update Story"]
-    J --> K["✅ Ready for Review"]
+    A1["💡 Project Idea"] --> A2{"📊 Optional: Analyst Research"}
+    A2 -->|Yes| A3["🔍 Analyst: Brainstorming"]
+    A2 -->|No| A6["📋 Create Project Brief"]
+    A3 --> A4["📈 Analyst: Market Research"]
+    A4 --> A5["🏢 Analyst: Competitor Analysis"]
+    A5 --> A6
+    A6 --> A7{"📄 Project Brief Available?"}
+    A7 -->|Yes| A8["👨‍💼 PM: Create PRD from Brief"]
+    A7 -->|No| A9["👨‍💼 PM: Interactive PRD Creation"]
+    A8 --> A10["📋 PRD Created"]
+    A9 --> A10
     
-    style A fill:#e8f5e9,color:#000
-    style B fill:#fff3e0,color:#000
-    style C fill:#2196f3,color:#fff
-    style D fill:#9c27b0,color:#fff
-    style E fill:#ff9800,color:#fff
-    style F fill:#e91e63,color:#fff
-    style G fill:#ff5722,color:#fff
-    style H fill:#4caf50,color:#fff
-    style I fill:#ffeb3b,color:#000
-    style J fill:#ff9800,color:#fff
-    style K fill:#4caf50,color:#fff
+    style A1 fill:#F0F0F0,color:#000000,stroke:#000000,stroke-width:3px
+    style A2 fill:#87CEEB,color:#000000,stroke:#000000,stroke-width:3px
+    style A3 fill:#98FB98,color:#000000,stroke:#000000,stroke-width:3px
+    style A4 fill:#90EE90,color:#000000,stroke:#000000,stroke-width:3px
+    style A5 fill:#ADFF2F,color:#000000,stroke:#000000,stroke-width:3px
+    style A6 fill:#FFD700,color:#000000,stroke:#000000,stroke-width:3px
+    style A7 fill:#DDA0DD,color:#000000,stroke:#000000,stroke-width:3px
+    style A8 fill:#FF8C00,color:#000000,stroke:#000000,stroke-width:3px
+    style A9 fill:#FFA500,color:#000000,stroke:#000000,stroke-width:3px
+    style A10 fill:#00FF00,color:#000000,stroke:#000000,stroke-width:3px
 ```
 
----
+## 6. Architecture & UX Design Phase
 
-## Part 6: Quality Assurance Workflows
-
-### 6.1 QA Test Architecture Flow
-**Purpose**: Complete QA process from risk assessment to gate decision  
-**When to Use**: Quality assurance, test planning, risk management  
-**Best For**: QA engineers, test architects, quality managers
+**What it shows:** Architecture creation with optional UX integration  
+**When to use:** After PRD completion, before development  
+**Best for:** Technical leads and architects
 
 ```mermaid
 graph TD
-    A["📝 Story Draft"] --> B["⚠️ Risk Assessment"]
-    B --> C{"Risk Level"}
-    C -->|High| D["📋 Test Design"]
-    C -->|Low| E["💻 Development"]
-    D --> E
-    E --> F["🔍 Test Coverage Check"]
-    F --> G["📊 NFR Assessment"]
-    G --> H["🧪 Full Review"]
-    H --> I{"Gate Decision"}
-    I -->|PASS| J["✅ Approved"]
-    I -->|CONCERNS| K["⚠️ Document Issues"]
-    I -->|FAIL| L["❌ Back to Dev"]
-    K --> J
+    A10["📋 PRD Created"] --> A11{"🎨 UX Required?"}
+    A11 -->|Yes| A12["🎨 UX Expert: Create Frontend Spec"]
+    A11 -->|No| A13["🏗️ Architect: Create Architecture"]
+    A12 --> A14["🎨 UX Expert: Generate UI Prompts"]
+    A14 --> A15["🏗️ Architect: Architecture + UX"]
+    A13 --> A16["👨‍💼 PO: Run Master Checklist"]
+    A15 --> A16
+    A16 --> A17{"✅ Documents Aligned?"}
+    A17 -->|Yes| A18["🎉 Planning Complete"]
+    A17 -->|No| A19["🔄 PO: Update Epics & Stories"]
+    A19 --> A20["📝 Update PRD/Architecture"]
+    A20 --> A16
     
-    style A fill:#e8f5e9,color:#000
-    style B fill:#ff5722,color:#fff
-    style C fill:#e91e63,color:#fff
-    style D fill:#ff9800,color:#fff
-    style E fill:#2196f3,color:#fff
-    style F fill:#9c27b0,color:#fff
-    style G fill:#ff9800,color:#fff
-    style H fill:#9c27b0,color:#fff
-    style I fill:#e91e63,color:#fff
-    style J fill:#4caf50,color:#fff
-    style K fill:#ffeb3b,color:#000
-    style L fill:#f44336,color:#fff
+    style A10 fill:#00FF00,color:#000000,stroke:#000000,stroke-width:3px
+    style A11 fill:#FF69B4,color:#000000,stroke:#000000,stroke-width:3px
+    style A12 fill:#00BFFF,color:#000000,stroke:#000000,stroke-width:3px
+    style A13 fill:#9370DB,color:#FFFFFF,stroke:#FFFFFF,stroke-width:3px
+    style A14 fill:#87CEEB,color:#000000,stroke:#000000,stroke-width:3px
+    style A15 fill:#8A2BE2,color:#FFFFFF,stroke:#FFFFFF,stroke-width:3px
+    style A16 fill:#FF8C00,color:#000000,stroke:#000000,stroke-width:3px
+    style A17 fill:#DDA0DD,color:#000000,stroke:#000000,stroke-width:3px
+    style A18 fill:#00FF32,color:#000000,stroke:#000000,stroke-width:3px
+    style A19 fill:#FFD700,color:#000000,stroke:#000000,stroke-width:3px
+    style A20 fill:#FFFF00,color:#000000,stroke:#000000,stroke-width:3px
 ```
 
-### 6.2 Quality Gate Decision Tree
-**Purpose**: How quality gate decisions are made  
-**When to Use**: Gate reviews, quality decisions  
-**Best For**: QA leads, technical managers
+## 7. Transition to Development
+
+**What it shows:** Moving from planning to development execution  
+**When to use:** After planning phase completion  
+**Best for:** Understanding the handoff process
 
 ```mermaid
 graph TD
-    A["🧪 Review Complete"] --> B{"Critical Issues?"}
-    B -->|Yes| C["❌ FAIL"]
-    B -->|No| D{"P0 Tests Missing?"}
-    D -->|Yes| C
-    D -->|No| E{"NFR Violations?"}
-    E -->|Yes| F{"Severity?"}
-    E -->|No| G["✅ PASS"]
-    F -->|High| C
-    F -->|Medium| H["⚠️ CONCERNS"]
-    F -->|Low| H
+    A18["🎉 Planning Complete"] --> A21["💻 Switch to IDE"]
+    A21 --> A22["👨‍💼 PO: Shard Documents"]
+    A22 --> B1["🚀 Ready for SM/Dev Cycle"]
+    B1 --> B2["🔄 Begin Story Development"]
     
-    style A fill:#9c27b0,color:#fff
-    style B fill:#e91e63,color:#fff
-    style C fill:#f44336,color:#fff
-    style D fill:#ff9800,color:#fff
-    style E fill:#ff9800,color:#fff
-    style F fill:#e91e63,color:#fff
-    style G fill:#4caf50,color:#fff
-    style H fill:#ffeb3b,color:#000
+    style A18 fill:#00FF32,color:#000000,stroke:#000000,stroke-width:3px
+    style A21 fill:#1E90FF,color:#000000,stroke:#000000,stroke-width:3px
+    style A22 fill:#FF8C00,color:#000000,stroke:#000000,stroke-width:3px
+    style B1 fill:#32CD32,color:#000000,stroke:#000000,stroke-width:3px
+    style B2 fill:#98FB98,color:#000000,stroke:#000000,stroke-width:3px
 ```
 
----
+## 8. QA Command Reference
 
-## Part 7: Environment Transition Workflows
-
-### 7.1 Web UI to IDE Transition
-**Purpose**: Moving from planning (web) to development (IDE)  
-**When to Use**: After planning completion, before development starts  
-**Best For**: Technical leads, developers transitioning phases
+**What it shows:** All QA agent commands and their purposes  
+**When to use:** Reference for QA workflow and command usage  
+**Best for:** QA team members and process understanding
 
 ```mermaid
 graph TD
-    A["🌐 Web UI Planning"] --> B["📄 Save PRD"]
-    B --> C["📄 Save Architecture"]
-    C --> D["💾 Download Docs"]
-    D --> E["📁 Create Project"]
-    E --> F["🔧 Install BMAD"]
-    F --> G["📂 Copy Docs"]
-    G --> H["💻 Open IDE"]
-    H --> I["✂️ Shard Documents"]
-    I --> J["🚀 Start Development"]
+    Q1["🎯 *risk"] --> Q1A["⚠️ Risk Profile Document"]
+    Q2["📋 *design"] --> Q2A["📊 Test Design Document"]
+    Q3["🔍 *trace"] --> Q3A["📈 Traceability Matrix"]
+    Q4["⚡ *nfr"] --> Q4A["📏 NFR Assessment"]
+    Q5["🧪 *review"] --> Q5A["📊 QA Results + Gate File"]
+    Q6["🚪 *gate"] --> Q6A["📝 Updated Gate Status"]
     
-    style A fill:#e3f2fd,color:#000
-    style B fill:#fff3e0,color:#000
-    style C fill:#f3e5f5,color:#000
-    style D fill:#ff9800,color:#fff
-    style E fill:#2196f3,color:#fff
-    style F fill:#4caf50,color:#fff
-    style G fill:#ff9800,color:#fff
-    style H fill:#2196f3,color:#fff
-    style I fill:#ff9800,color:#fff
-    style J fill:#4caf50,color:#fff
+    style Q1 fill:#FFD700,color:#000000,stroke:#000000,stroke-width:3px
+    style Q1A fill:#FFFF00,color:#000000,stroke:#000000,stroke-width:3px
+    style Q2 fill:#FFA500,color:#000000,stroke:#000000,stroke-width:3px
+    style Q2A fill:#FF8C00,color:#000000,stroke:#000000,stroke-width:3px
+    style Q3 fill:#00BFFF,color:#000000,stroke:#000000,stroke-width:3px
+    style Q3A fill:#87CEEB,color:#000000,stroke:#000000,stroke-width:3px
+    style Q4 fill:#1E90FF,color:#000000,stroke:#000000,stroke-width:3px
+    style Q4A fill:#00CED1,color:#000000,stroke:#000000,stroke-width:3px
+    style Q5 fill:#FF69B4,color:#000000,stroke:#000000,stroke-width:3px
+    style Q5A fill:#DDA0DD,color:#000000,stroke:#000000,stroke-width:3px
+    style Q6 fill:#9370DB,color:#FFFFFF,stroke:#FFFFFF,stroke-width:3px
+    style Q6A fill:#8A2BE2,color:#FFFFFF,stroke:#FFFFFF,stroke-width:3px
 ```
 
-### 7.2 Context Management Flow
-**Purpose**: How context is managed across agents and phases  
-**When to Use**: Optimizing agent performance, managing large projects  
-**Best For**: Technical architects, senior developers
+## 9. QA Command Flow
+
+**What it shows:** Recommended sequence for QA commands  
+**When to use:** Planning QA activities for a story  
+**Best for:** Understanding when to use each QA command
+
+```mermaid
+graph LR
+    A["📝 Story Draft"] --> B["🎯 *risk"]
+    B --> C["📋 *design"]
+    C --> D["👩‍💻 Development"]
+    D --> E["🔍 *trace (optional)"]
+    E --> F["⚡ *nfr (optional)"]
+    F --> G["🧪 *review"]
+    G --> H["🚪 *gate (if needed)"]
+    
+    style A fill:#F0F0F0,color:#000000,stroke:#000000,stroke-width:3px
+    style B fill:#FFD700,color:#000000,stroke:#000000,stroke-width:3px
+    style C fill:#FFA500,color:#000000,stroke:#000000,stroke-width:3px
+    style D fill:#32CD32,color:#000000,stroke:#000000,stroke-width:3px
+    style E fill:#00BFFF,color:#000000,stroke:#000000,stroke-width:3px
+    style F fill:#1E90FF,color:#000000,stroke:#000000,stroke-width:3px
+    style G fill:#FF69B4,color:#000000,stroke:#000000,stroke-width:3px
+    style H fill:#9370DB,color:#FFFFFF,stroke:#FFFFFF,stroke-width:3px
+```
+
+## 10. Technical Debt Management
+
+**What it shows:** How technical debt is identified, tracked, and managed  
+**When to use:** When QA identifies non-blocking issues  
+**Best for:** Understanding debt acceptance vs. fixing decisions
 
 ```mermaid
 graph TD
-    A["📚 Full Context"] --> B{"Context Size?"}
-    B -->|Large| C["🔄 Clear Context"]
-    B -->|Small| D["➕ Add Files"]
-    C --> E["📝 Load Story Only"]
-    D --> F["📂 Load Dependencies"]
-    E --> G["💻 Focused Work"]
-    F --> G
-    G --> H{"Performance?"}
-    H -->|Degraded| C
-    H -->|Good| I["✅ Continue"]
+    TD1["🔍 Identify Non-Blocking Issues"] --> TD2["📝 Document in technical-debt.md"]
+    TD2 --> TD3["⚠️ Accept CONCERNS Gate"]
+    TD3 --> TD4["📊 Track Priority & Effort"]
+    TD4 --> TD5["📅 Review During Sprint Planning"]
+    TD5 --> TD6{"🤔 Address Now?"}
+    TD6 -->|Yes| TD7["🔧 Create Fix Story"]
+    TD6 -->|No| TD8["📋 Keep in Backlog"]
     
-    style A fill:#e3f2fd,color:#000
-    style B fill:#e91e63,color:#fff
-    style C fill:#ff5722,color:#fff
-    style D fill:#4caf50,color:#fff
-    style E fill:#ff9800,color:#fff
-    style F fill:#2196f3,color:#fff
-    style G fill:#2196f3,color:#fff
-    style H fill:#e91e63,color:#fff
-    style I fill:#4caf50,color:#fff
+    style TD1 fill:#FFD700,color:#000000,stroke:#000000,stroke-width:3px
+    style TD2 fill:#FF8C00,color:#000000,stroke:#000000,stroke-width:3px
+    style TD3 fill:#FFA500,color:#000000,stroke:#000000,stroke-width:3px
+    style TD4 fill:#87CEEB,color:#000000,stroke:#000000,stroke-width:3px
+    style TD5 fill:#DDA0DD,color:#000000,stroke:#000000,stroke-width:3px
+    style TD6 fill:#FF69B4,color:#000000,stroke:#000000,stroke-width:3px
+    style TD7 fill:#32CD32,color:#000000,stroke:#000000,stroke-width:3px
+    style TD8 fill:#F0F0F0,color:#000000,stroke:#000000,stroke-width:3px
 ```
 
----
+## 11. Greenfield vs Brownfield Decision
 
-## Part 8: Specialized Workflows
-
-### 8.1 Brownfield Development Flow
-**Purpose**: Working with existing codebases  
-**When to Use**: Legacy systems, adding features to existing projects  
-**Best For**: Maintenance teams, modernization projects
+**What it shows:** Different workflows for new vs existing projects  
+**When to use:** Deciding which BMAD workflow to follow  
+**Best for:** Project initialization and process selection
 
 ```mermaid
 graph TD
-    A["📁 Existing Project"] --> B["📊 Flatten Codebase"]
-    B --> C["📄 Document System"]
-    C --> D["📋 Create Brownfield PRD"]
-    D --> E["🏗️ Update Architecture"]
-    E --> F["✂️ Shard for Enhancement"]
-    F --> G["💻 Implement Changes"]
-    G --> H["🧪 Regression Testing"]
-    H --> I["✅ Deploy Changes"]
+    A["🚀 Project Type"] --> B{"🤔 Greenfield or Brownfield?"}
+    B -->|New Project| C["✨ Standard Planning Workflow"]
+    B -->|Existing Project| D["📖 Document Existing System First"]
     
-    style A fill:#607d8b,color:#fff
-    style B fill:#ff9800,color:#fff
-    style C fill:#f3e5f5,color:#000
-    style D fill:#fff3e0,color:#000
-    style E fill:#f3e5f5,color:#000
-    style F fill:#ff9800,color:#fff
-    style G fill:#2196f3,color:#fff
-    style H fill:#9c27b0,color:#fff
-    style I fill:#4caf50,color:#fff
+    C --> C1["👥 Analyst → PM → Architect → PO"]
+    D --> D1["🏗️ Architect: *document-project"]
+    D1 --> D2["👨‍💼 PM: *create-brownfield-prd"]
+    D2 --> D3["🏗️ Architect: *create-brownfield-architecture"]
+    D3 --> C1
+    
+    C1 --> E["📂 Shard Documents"]
+    E --> F["🔄 SM/Dev Cycle"]
+    
+    style A fill:#F0F0F0,color:#000000,stroke:#000000,stroke-width:3px
+    style B fill:#DDA0DD,color:#000000,stroke:#000000,stroke-width:3px
+    style C fill:#00FF00,color:#000000,stroke:#000000,stroke-width:3px
+    style D fill:#FF8C00,color:#000000,stroke:#000000,stroke-width:3px
+    style C1 fill:#87CEEB,color:#000000,stroke:#000000,stroke-width:3px
+    style D1 fill:#FFA500,color:#000000,stroke:#000000,stroke-width:3px
+    style D2 fill:#FFD700,color:#000000,stroke:#000000,stroke-width:3px
+    style D3 fill:#FFFF00,color:#000000,stroke:#000000,stroke-width:3px
+    style E fill:#98FB98,color:#000000,stroke:#000000,stroke-width:3px
+    style F fill:#32CD32,color:#000000,stroke:#000000,stroke-width:3px
 ```
 
-### 8.2 Technical Debt Management
-**Purpose**: Tracking and resolving technical debt  
-**When to Use**: Non-blocking issues, framework limitations  
-**Best For**: Long-term maintenance, quality improvement
+## 12. Epic Completion & Next Steps
+
+**What it shows:** What happens after completing an epic  
+**When to use:** End of epic planning and transition  
+**Best for:** Understanding post-development activities
 
 ```mermaid
 graph TD
-    A["🐛 Issue Found"] --> B{"Blocking?"}
-    B -->|Yes| C["🔧 Fix Now"]
-    B -->|No| D["📝 Document TD"]
-    D --> E["🏷️ Assign TD-ID"]
-    E --> F["⚠️ Accept CONCERNS"]
-    F --> G["📋 Track in Backlog"]
-    G --> H{"Sprint Planning"}
-    H -->|Prioritized| I["🔧 Fix TD"]
-    H -->|Deferred| J["📊 Review Next Sprint"]
-    I --> K["✅ Mark Resolved"]
+    C1["🎉 Epic Complete"] --> C2["🔗 Integration Testing"]
+    C2 --> C3["⚡ Performance Validation"]
+    C3 --> C4["👥 User Acceptance Testing"]
+    C4 --> C5{"✅ Ready for Production?"}
+    C5 -->|Yes| C6["🚀 Production Deployment"]
+    C5 -->|No| C7["🔧 Address Issues"]
+    C6 --> C8["📊 Monitoring & Maintenance"]
+    C7 --> C2
     
-    style A fill:#ff5722,color:#fff
-    style B fill:#e91e63,color:#fff
-    style C fill:#f44336,color:#fff
-    style D fill:#ffeb3b,color:#000
-    style E fill:#ff9800,color:#fff
-    style F fill:#ffeb3b,color:#000
-    style G fill:#9c27b0,color:#fff
-    style H fill:#e91e63,color:#fff
-    style I fill:#2196f3,color:#fff
-    style J fill:#ff9800,color:#fff
-    style K fill:#4caf50,color:#fff
+    style C1 fill:#00FF00,color:#000000,stroke:#000000,stroke-width:3px
+    style C2 fill:#87CEEB,color:#000000,stroke:#000000,stroke-width:3px
+    style C3 fill:#1E90FF,color:#000000,stroke:#000000,stroke-width:3px
+    style C4 fill:#FF69B4,color:#000000,stroke:#000000,stroke-width:3px
+    style C5 fill:#DDA0DD,color:#000000,stroke:#000000,stroke-width:3px
+    style C6 fill:#32CD32,color:#000000,stroke:#000000,stroke-width:3px
+    style C7 fill:#FF4500,color:#FFFFFF,stroke:#FFFFFF,stroke-width:3px
+    style C8 fill:#9370DB,color:#FFFFFF,stroke:#FFFFFF,stroke-width:3px
 ```
 
----
+## Key Success Metrics
 
-## Part 9: Communication Workflows
+### Quality Indicators
 
-### 9.1 Stakeholder Communication Flow
-**Purpose**: Information flow between technical team and stakeholders  
-**When to Use**: Status updates, requirement clarification  
-**Best For**: Project managers, team leads
+- **Story Clarity Score**: Target 9+ / 10
+- **QA Quality Score**: Target 90+ / 100
+- **Gate Pass Rate**: Target 85%+ PASS
+- **Technical Debt**: Managed, not blocking
 
-```mermaid
-graph TD
-    A["👥 Stakeholders"] --> B["📋 PM"]
-    B --> C["📄 PRD"]
-    C --> D["🏗️ Architect"]
-    D --> E["💻 Dev Team"]
-    E --> F["📊 Progress Reports"]
-    F --> B
-    B --> G["📈 Status Updates"]
-    G --> A
-    
-    style A fill:#e3f2fd,color:#000
-    style B fill:#fff3e0,color:#000
-    style C fill:#fff3e0,color:#000
-    style D fill:#f3e5f5,color:#000
-    style E fill:#2196f3,color:#fff
-    style F fill:#9c27b0,color:#fff
-    style G fill:#4caf50,color:#fff
-```
+### Performance Metrics
 
-### 9.2 Inter-Agent Communication
-**Purpose**: How agents share information through files  
-**When to Use**: Understanding data flow, debugging workflows  
-**Best For**: System architects, process engineers
-
-```mermaid
-graph TD
-    A["📋 PM Agent"] --> B["📄 docs/prd.md"]
-    B --> C["🏗️ Architect Agent"]
-    C --> D["📄 docs/architecture.md"]
-    D --> E["👮 PO Agent"]
-    E --> F["📁 docs/epics/"]
-    F --> G["📝 SM Agent"]
-    G --> H["📁 docs/stories/"]
-    H --> I["💻 Dev Agent"]
-    I --> J["📄 Updated Story Files"]
-    J --> K["🧪 QA Agent"]
-    K --> L["📁 docs/qa/"]
-    
-    style A fill:#fff3e0,color:#000
-    style B fill:#fce4ec,color:#000
-    style C fill:#f3e5f5,color:#000
-    style D fill:#fce4ec,color:#000
-    style E fill:#ff9800,color:#fff
-    style F fill:#fce4ec,color:#000
-    style G fill:#e8f5e9,color:#000
-    style H fill:#fce4ec,color:#000
-    style I fill:#2196f3,color:#fff
-    style J fill:#fce4ec,color:#000
-    style K fill:#9c27b0,color:#fff
-    style L fill:#fce4ec,color:#000
-```
-
----
-
-## Part 10: Meta Summaries - Process Navigation
-
-### 10.1 By Goal: Starting a New Project
-**Purpose**: Complete greenfield project workflow  
-**Who**: Product teams starting from scratch  
-**When**: New product development, MVP creation  
-**Best For**: Startups, innovation teams, new features
-
-```mermaid
-graph TD
-    A["Start Here"] --> B["3.2 Agent Decision Tree"]
-    B --> C["4.1 Planning Phase Overview"]
-    C --> D["4.2 Document Creation Flow"]
-    D --> E["7.1 Web UI to IDE Transition"]
-    E --> F["5.1 Core Development Cycle"]
-    F --> G["5.2 Developer Task Execution"]
-    G --> H["6.1 QA Test Architecture Flow"]
-    
-    style A fill:#4caf50,color:#fff
-    style B fill:#e3f2fd,color:#000
-    style C fill:#fff3e0,color:#000
-    style D fill:#fff3e0,color:#000
-    style E fill:#ff9800,color:#fff
-    style F fill:#2196f3,color:#fff
-    style G fill:#2196f3,color:#fff
-    style H fill:#9c27b0,color:#fff
-```
-
-### 10.2 By Goal: Enhancing Existing Project
-**Purpose**: Brownfield enhancement workflow  
-**Who**: Maintenance teams, modernization projects  
-**When**: Adding features to legacy systems  
-**Best For**: Enterprise teams, established products
-
-```mermaid
-graph TD
-    A["Start Here"] --> B["8.1 Brownfield Development Flow"]
-    B --> C["4.2 Document Creation Flow"]
-    C --> D["5.1 Core Development Cycle"]
-    D --> E["6.1 QA Test Architecture Flow"]
-    E --> F["8.2 Technical Debt Management"]
-    
-    style A fill:#4caf50,color:#fff
-    style B fill:#607d8b,color:#fff
-    style C fill:#fff3e0,color:#000
-    style D fill:#2196f3,color:#fff
-    style E fill:#9c27b0,color:#fff
-    style F fill:#ffeb3b,color:#000
-```
-
-### 10.3 By Function: Quality Assurance Focus
-**Purpose**: Complete quality workflow  
-**Who**: QA engineers, test architects  
-**When**: Test planning, quality gates  
-**Best For**: Regulated industries, high-reliability systems
-
-```mermaid
-graph TD
-    A["QA Start"] --> B["1.2 Story Status Flow - Complex"]
-    B --> C["6.1 QA Test Architecture Flow"]
-    C --> D["6.2 Quality Gate Decision Tree"]
-    D --> E["8.2 Technical Debt Management"]
-    
-    style A fill:#9c27b0,color:#fff
-    style B fill:#e91e63,color:#fff
-    style C fill:#9c27b0,color:#fff
-    style D fill:#e91e63,color:#fff
-    style E fill:#ffeb3b,color:#000
-```
-
-### 10.4 By Business Process: Agile Sprint
-**Purpose**: Sprint execution workflow  
-**Who**: Scrum teams, agile practitioners  
-**When**: Sprint planning and execution  
-**Best For**: Iterative development, continuous delivery
-
-```mermaid
-graph TD
-    A["Sprint Start"] --> B["5.1 Core Development Cycle"]
-    B --> C["1.1 Story Status Flow - Simple"]
-    C --> D["5.2 Developer Task Execution"]
-    D --> E["6.1 QA Test Architecture Flow"]
-    E --> F["Next Story"]
-    F --> B
-    
-    style A fill:#ff9800,color:#fff
-    style B fill:#2196f3,color:#fff
-    style C fill:#ffeb3b,color:#000
-    style D fill:#2196f3,color:#fff
-    style E fill:#9c27b0,color:#fff
-    style F fill:#4caf50,color:#fff
-```
-
----
-
-## Navigation Guide
-
-### For New Users
-1. Start with **2.1 BMAD SDLC - Simplified**
-2. Review **3.1 Agent Collaboration Flow**
-3. Study **4.1 Planning Phase Overview**
-4. Practice with **1.1 Story Status Flow - Simple**
-
-### For Experienced Users
-1. Master **2.2 BMAD SDLC - Advanced**
-2. Optimize with **7.2 Context Management Flow**
-3. Implement **6.1 QA Test Architecture Flow**
-4. Handle complexity with **1.2 Story Status Flow - Complex**
-
-### For Project Managers
-1. Focus on **4.1 Planning Phase Overview**
-2. Use **9.1 Stakeholder Communication Flow**
-3. Monitor with **5.1 Core Development Cycle**
-4. Report using **3.1 Agent Collaboration Flow**
-
-### For Developers
-1. Master **5.2 Developer Task Execution**
-2. Follow **1.1 Story Status Flow - Simple**
-3. Understand **9.2 Inter-Agent Communication**
-4. Apply **7.2 Context Management Flow**
-
-### For QA Engineers
-1. Start with **6.1 QA Test Architecture Flow**
-2. Apply **6.2 Quality Gate Decision Tree**
-3. Track with **8.2 Technical Debt Management**
-4. Execute **1.2 Story Status Flow - Complex**
-
----
-
-## Quick Reference Matrix
-
-| Workflow Type | Simple Project | Complex Project | Brownfield | High Risk |
-|--------------|---------------|-----------------|------------|-----------|
-| **Planning** | 4.1 | 2.2 | 8.1 | 6.1 |
-| **Development** | 1.1, 5.2 | 1.2, 5.1 | 8.1 | 6.1 |
-| **Testing** | 1.1 | 6.1, 6.2 | 8.1 | 6.2 |
-| **Management** | 2.1 | 2.2 | 8.2 | 9.1 |
-
----
+- **Development Velocity**: Stories per week
+- **Context Efficiency**: Agent response quality over time
+- **Error Rate**: Missing file references, alignment issues
+- **Time to First Code**: Planning phase duration
 
 ## Color Legend
 
-- 🟡 **Yellow** (#ffeb3b): Decision points, questions
-- 🟢 **Green** (#4caf50): Success, completion, approval
-- 🔵 **Blue** (#2196f3): Development, implementation
-- 🟣 **Purple** (#9c27b0): Testing, QA, validation
-- 🟠 **Orange** (#ff9800): Review, validation, checks
-- 🔴 **Red** (#f44336, #e91e63): Failures, critical decisions
-- 🟤 **Brown** (#795548): Brownfield, legacy
-- ⚪ **Light** (various pastels): Information, documentation
+- 🟡 **Bright Yellow/Gold** (#FFD700, #FFFF00): Draft states, planning, risk assessment
+- 🟢 **Bright Green** (#00FF00, #32CD32): Success, completion, ready states
+- 🔵 **Bright Blue** (#00BFFF, #1E90FF): Information, QA processes, reviews
+- 🟠 **Bright Orange** (#FF8C00, #FFA500): Planning phases, architecture work
+- 🟣 **Purple** (#9370DB, #8A2BE2): Quality gates, decisions - WHITE TEXT
+- 🔴 **Red-Orange** (#FF4500): Issues, failures, rework needed - WHITE TEXT
+- ⚪ **Light Gray** (#F0F0F0): Neutral processes, starting points
 
 ---
 
-*This visual guide represents the complete BMAD-METHOD framework. Each diagram is designed to be clear on both light and dark backgrounds with high contrast between fill and text colors.*
-
-**Version**: 1.0  
-**Last Updated**: Based on BMAD-METHOD documentation  
-**Created For**: BMAD-METHOD practitioners and teams
+_These diagrams represent the complete BMAD Method workflow optimized for dark mode viewing with maximum contrast and readability._
