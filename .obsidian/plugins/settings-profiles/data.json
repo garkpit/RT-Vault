@@ -6,7 +6,8 @@
   "uiUpdateInterval": 1000,
   "devices": {
     "3222129663758c4451cbbec21f5f9855be1514b5592c2013dab4bf12da607f57": "/Users/Jay/Library/Application Support/ObsidianPlugins/Profiles",
-    "0de26ee0e3a126d2cb1b5ac9739f610ba0ea0c81716554ffe741758166e04cc6": "/Users/Jay/Library/Application Support/ObsidianPlugins/Profiles"
+    "0de26ee0e3a126d2cb1b5ac9739f610ba0ea0c81716554ffe741758166e04cc6": "/Users/Jay/Library/Application Support/ObsidianPlugins/Profiles",
+    "1d3f22eafd3d621340cc28195bf99b2d4036e25630cd85c04efb73939002e81f": "C:\\Users\\RightsTracker\\AppData\\Local\\ObsidianPlugins\\Data\\Profiles"
   },
   "statusbarInteraction": {
     "click": "auto",
