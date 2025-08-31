@@ -12,13 +12,13 @@ This feature implements a sophisticated video annotation system with zoom/pan ca
 
 ```
 ┌─────────────────────────────────────┐
-│       ZoomContainer (Transform)      │  <- Handles zoom/pan transforms
+│       ZoomContainer (Transform)     │  <- Handles zoom/pan transforms
 ├─────────────────────────────────────┤
-│   VideoLayer  │   CanvasLayer        │  <- Synchronized layers
-│   (Video.js)  │   (Fabric.js)        │
+│   VideoLayer  │   CanvasLayer       │  <- Synchronized layers
+│   (Video.js)  │   (Fabric.js)       │
 └─────────────────────────────────────┘
-│               Minimap                │  <- Navigation overlay (outside transform)
-└─────────────────────────────────────┘
+│               Minimap               │  <- Navigation overlay 
+└─────────────────────────────────────┘     (outside transform)
 ```
 
 - **Video Layer**: Base layer for video playback
