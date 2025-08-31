@@ -29,7 +29,7 @@ It got too big and was trying to be too clever. While absolutely lovely it was s
 Compare:
 [[Architecture description BEFORE clean up]]
 [[Architecture description AFTER clean up]]
-Plus, I also logged the Plan and the after Review. (If you dig around Claude chats you will find the goty details, but actually following the sequence is almost impossible; I used the Chat branching technique often.
+Plus, I also logged the Plan and the after Review. (If you dig around Claude chats you will find the gory details, but actually following the sequence is almost impossible; I used the Chat branching technique often.
 
 
 
