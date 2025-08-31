@@ -7,12 +7,13 @@ So, please don't delete this file :FarFaceLaughBeam:
 > Jay here - Brownie points if he manages it. Double if he makes the formatting nice :FarPenToSquare:
 
 # Welcome to RT++ Vault
-Where Jay shares anything remotely interesting with Mike and Ross
-and vice versa 
+## An Obsidian vault
+### Shared between Jay, Mike, and Ross
+
 
 # IMPORTANT THINGS
-## 1 - DO NOT USE THIS VAULT ON MOBILE (so says the git plugin docs)
-
-
-
-
+## 1 - DO NOT USE THIS VAULT ON MOBILE 
+### (so says the git plugin docs)
+## 2 - Do not use funky characters in the title of any notes
+### like > or < or : or ? (etc)
+### (because it breaks sharing for PC users like Mike)
